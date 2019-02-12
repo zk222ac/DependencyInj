@@ -10,8 +10,14 @@ namespace DependencyInj
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
+            // first declare ClassA instance , because we need to pass 
+            // the CLassA instance into ClassB Constructor 
+            ClassA classA = new ClassA();
+
+            ClassB b = new ClassB(classA);
+
+            b.PrintClassAProperties();
+
             Console.WriteLine("Hello World!");
             Console.ReadKey();
 
